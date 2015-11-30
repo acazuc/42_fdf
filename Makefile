@@ -6,7 +6,7 @@
 #    By: acazuc <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 06:50:12 by acazuc            #+#    #+#              #
-#    Updated: 2015/11/30 06:09:40 by acazuc           ###   ########.fr        #
+#    Updated: 2015/11/30 06:20:44 by acazuc           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ OBJS = $(SRCS:.c=.o)
 
 LIBRARY = -lm -L libft/ -lft -L minilibx/ -lmlx -framework OpenGL -framework AppKit
 
-all: $(NAME)
+all: libft $(NAME)
 
 $(NAME): $(OBJS)
 	@gcc $(FLAGS) -o $(NAME) $^ $(LIBRARY)
@@ -28,7 +28,10 @@ $(NAME): $(OBJS)
 %.o: %.c
 	@gcc $(FLAGS) -o $@ -c $<
 
-.PHONY: clean fclean re
+.PHONY: clean fclean re libft
+
+libft:
+	@(cd libft/; make)
 
 clean:
 	@rm -f $(OBJS)
