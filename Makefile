@@ -6,11 +6,11 @@
 #    By: acazuc <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 06:50:12 by acazuc            #+#    #+#              #
-#    Updated: 2015/11/29 20:23:53 by acazuc           ###   ########.fr        #
+#    Updated: 2015/11/30 06:09:40 by acazuc           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = acazuc_fdf
+NAME = fdf
 
 FLAGS = -Wall -Wextra -Werror
 
