@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 12:51:58 by acazuc            #+#    #+#             */
-/*   Updated: 2015/11/29 20:15:05 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/01 06:41:47 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static void		draw_stats_reset(t_world *world)
 	}
 }
 
-void			draw_stats_positions(t_world *world, int color)
+void			draw_stats_positions(t_world *world, unsigned int color)
 {
 	mlx_string_put(world->window->mlx, world->window->mlx_window
 			, 10, 10, color, "Position");
@@ -51,7 +51,7 @@ void			draw_stats_positions(t_world *world, int color)
 			, 40, 70, color, ft_itoa(world->position->z));
 }
 
-void			draw_stats_rotations(t_world *world, int color)
+void			draw_stats_rotations(t_world *world, unsigned int color)
 {
 	mlx_string_put(world->window->mlx, world->window->mlx_window
 			, 10, 100, color, "Rotation");
@@ -67,7 +67,7 @@ void			draw_stats_rotations(t_world *world, int color)
 
 void			draw_stats(t_world *world)
 {
-	int		color;
+	unsigned int		color;
 
 	color = 0x0066FF;
 	draw_stats_reset(world);

@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 17:44:42 by acazuc            #+#    #+#             */
-/*   Updated: 2015/11/29 20:39:32 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/01 06:41:40 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,9 @@ void			world_init(t_world *world)
 		error_quit(world, ft_strcat("Failed to malloc world window struct"
 			, " (world_init.c:41)"));
 	world_init_vectors(world);
+	world->window->mlx = NULL;
+	world->window->mlx_window = NULL;
+	world->map = NULL;
 	world->window->width = 1920;
 	world->window->height = 1080;
 }

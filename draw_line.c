@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 14:25:27 by acazuc            #+#    #+#             */
-/*   Updated: 2015/11/29 20:31:40 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/01 06:38:52 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	draw_line_part(t_world *world, t_line *line)
 		point->y = line->p1->y + (line->p2->y - line->p1->y) * ratio;
 		y = line->org_y + line->dy * ratio;
 		mlx_pixel_put(world->window->mlx, world->window->mlx_window, x, y
-				, get_color(point));
+				, mlx_get_color_value(world->window->mlx, get_color(point)));
 		ratio += 1.0 / line->length;
 	}
 	free(point);

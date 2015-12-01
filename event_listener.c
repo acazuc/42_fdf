@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 06:55:32 by acazuc            #+#    #+#             */
-/*   Updated: 2015/11/29 20:35:07 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/01 06:39:39 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,13 +85,13 @@ int		key_listener(int keycode, void *param)
 
 int		expose_listener(void *param)
 {
-	ft_putendl("Expose event");
-	param = NULL;
-	return (0);
-}
+	t_world		*world;
 
-int		loop_listener(void *param)
-{
+	world = (t_world*)param;
+	mlx_clear_window(world->window->mlx, world->window->mlx_window);
+	draw_map(world);
+	draw_stats(world);
+	ft_putendl("Expose event");
 	param = NULL;
 	return (0);
 }

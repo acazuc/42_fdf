@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 11:58:23 by acazuc            #+#    #+#             */
-/*   Updated: 2015/11/29 20:17:13 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/01 06:37:10 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,6 @@ int		main(int argc, char **argv)
 		error_quit(world, "Failed to initializing mlx window (fdf.c:39)");
 	load_map(world, argv[1]);
 	world_init_positions(world);
-	draw_map(world);
-	draw_stats(world);
 	mlx_key_hook(world->window->mlx_window, &key_listener, world);
 	mlx_mouse_hook(world->window->mlx_window, &mouse_listener, world);
 	mlx_expose_hook(world->window->mlx_window, &expose_listener, world);
