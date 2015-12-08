@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_quit.c                                       :+:      :+:    :+:   */
+/*   draw_reset.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/29 19:32:12 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/07 11:45:24 by acazuc           ###   ########.fr       */
+/*   Created: 2015/12/07 13:24:08 by acazuc            #+#    #+#             */
+/*   Updated: 2015/12/07 13:47:27 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft/libft.h"
+#include "pixel_put.h"
+#include "world.h"
 
-void	error_quit(char *error_message)
+void	draw_reset(t_world *world)
 {
-	ft_putstr("Error happened: ");
-	ft_putendl(error_message);
-	exit(-1);
+	int		x;
+	int		y;
+
+	y = 0;
+	while (y < world->window->height)
+	{
+		x = 0;
+		while (x < world->window->width)
+		{
+			pixel_put(world, x, y, 0);
+			x++;
+		}
+		y++;
+	}
 }

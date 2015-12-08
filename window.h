@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 14:44:23 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/01 06:36:40 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/07 13:50:41 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,12 @@ typedef struct			s_window
 {
 	void				*mlx_window;
 	void				*mlx;
+	void				*img;
+	char				*data;
 	int					width;
 	int					height;
+	int					bpp;
+	int					endian;
 }						t_window;
 
 #endif

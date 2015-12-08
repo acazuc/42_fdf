@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_quit.c                                       :+:      :+:    :+:   */
+/*   window_init.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/29 19:32:12 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/07 11:45:24 by acazuc           ###   ########.fr       */
+/*   Created: 2015/12/07 13:42:49 by acazuc            #+#    #+#             */
+/*   Updated: 2015/12/07 13:45:01 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft/libft.h"
+#ifndef FT_WINDOW_INIT_H
+# define FT_WINDOW_INIT_H
 
-void	error_quit(char *error_message)
-{
-	ft_putstr("Error happened: ");
-	ft_putendl(error_message);
-	exit(-1);
-}
+# include "world.h"
+
+void	window_init(t_world *world);
+
+#endif

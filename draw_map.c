@@ -6,11 +6,12 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 07:17:02 by acazuc            #+#    #+#             */
-/*   Updated: 2015/11/29 20:29:52 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/08 08:23:29 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "minilibx/mlx.h"
 #include "error_quit.h"
 #include "draw_line.h"
 #include "point.h"
@@ -53,17 +54,11 @@ static void		draw_map_part_diago(t_world *world, t_point *p1, t_point *p2)
 	}
 }
 
-void			draw_map(t_world *world)
+static void		draw_map_part(t_world *world, t_point *p1, t_point *p2)
 {
-	t_point		*p1;
-	t_point		*p2;
 	int			x;
 	int			z;
 
-	if (!(p1 = malloc(sizeof(t_point))))
-		error_quit(world, "Failed to malloc point number 1 (draw_map.c:78)");
-	if (!(p2 = malloc(sizeof(t_point))))
-		error_quit(world, "failed to malloc point number 2 (draw_map.c:80)");
 	z = -1;
 	while (++z < world->map->height)
 	{
@@ -77,6 +72,21 @@ void			draw_map(t_world *world)
 			draw_map_part_diago(world, p1, p2);
 		}
 	}
+}
+
+void			draw_map(t_world *world)
+{
+	t_point		*p1;
+	t_point		*p2;
+
+	if (!(p1 = malloc(sizeof(t_point))))
+		error_quit("Failed to malloc point number 1 (draw_map.c:78)");
+	if (!(p2 = malloc(sizeof(t_point))))
+		error_quit("failed to malloc point number 2 (draw_map.c:80)");
+	world->lines = 0;
+	draw_map_part(world, p1, p2);
 	free(p1);
 	free(p2);
+	mlx_put_image_to_window(world->window->mlx, world->window->mlx_window
+			, world->window->img, 0, 0);
 }

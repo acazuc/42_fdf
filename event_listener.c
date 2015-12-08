@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 06:55:32 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/01 06:39:39 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/07 13:53:50 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "libft/libft.h"
 #include "minilibx/mlx.h"
 #include "draw_stats.h"
-#include "world_free.h"
+#include "draw_reset.h"
 #include "movements.h"
 #include "rotations.h"
 #include "draw_map.h"
@@ -66,16 +66,13 @@ int		key_listener(int keycode, void *param)
 	ft_putnbr(keycode);
 	ft_putendl("}");
 	if (keycode == 53)
-	{
-		world_free(world);
 		exit(1);
-	}
 	if (keycode == 126 || keycode == 125 || keycode == 124
 			|| keycode == 123 || keycode == 257 || keycode == 49
 			|| keycode == 0 || keycode == 1 || keycode == 2
 			|| keycode == 13)
 	{
-		mlx_clear_window(world->window->mlx, world->window->mlx_window);
+		draw_reset(world);
 		key_listener_moves(world, keycode);
 		draw_map(world);
 		draw_stats(world);
@@ -88,7 +85,7 @@ int		expose_listener(void *param)
 	t_world		*world;
 
 	world = (t_world*)param;
-	mlx_clear_window(world->window->mlx, world->window->mlx_window);
+	draw_reset(world);
 	draw_map(world);
 	draw_stats(world);
 	ft_putendl("Expose event");

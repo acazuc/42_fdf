@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_quit.c                                       :+:      :+:    :+:   */
+/*   ft_erase.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/29 19:32:12 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/07 11:45:24 by acazuc           ###   ########.fr       */
+/*   Created: 2015/12/07 13:14:38 by acazuc            #+#    #+#             */
+/*   Updated: 2015/12/07 13:16:10 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft/libft.h"
+#include "pixel_put.h"
 
-void	error_quit(char *error_message)
+void	ft_erase(t_env *env)
 {
-	ft_putstr("Error happened: ");
-	ft_putendl(error_message);
-	exit(-1);
+	int		x;
+	int		y;
+
+	y = 0;
+	while (y < env->window->height)
+	{
+		x = 0;
+		while (x < env->window->width)
+		{
+			pixel_put(env, x, y, 0);
+			x++;
+		}
+		y++;
+	}
 }
