@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 06:55:32 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/07 13:53:50 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/09 08:59:48 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,6 @@
 #include "rotations.h"
 #include "draw_map.h"
 #include "world.h"
-
-int		mouse_listener(int button, int x, int y, void *param)
-{
-	ft_putstr("Mouse event: {button: ");
-	ft_putnbr(button);
-	ft_putstr(", x: ");
-	ft_putnbr(x);
-	ft_putstr(", y: ");
-	ft_putnbr(y);
-	ft_putendl("}");
-	param = NULL;
-	return (0);
-}
 
 void	key_listener_moves(t_world *world, int key)
 {
@@ -62,9 +49,6 @@ int		key_listener(int keycode, void *param)
 	t_world		*world;
 
 	world = (t_world*)param;
-	ft_putstr("Keyboard event: {keycode: ");
-	ft_putnbr(keycode);
-	ft_putendl("}");
 	if (keycode == 53)
 		exit(1);
 	if (keycode == 126 || keycode == 125 || keycode == 124
@@ -88,7 +72,5 @@ int		expose_listener(void *param)
 	draw_reset(world);
 	draw_map(world);
 	draw_stats(world);
-	ft_putendl("Expose event");
-	param = NULL;
 	return (0);
 }

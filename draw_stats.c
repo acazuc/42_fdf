@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 12:51:58 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/08 08:17:20 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/09 08:03:44 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ static void		draw_stats_reset(t_world *world)
 	int		y;
 
 	x = 10;
-	while (x < 100)
+	while (x < 200)
 	{
 		y = 10;
-		while (y < 190)
+		while (y < 210)
 		{
 			mlx_pixel_put(world->window->mlx, world->window->mlx_window
 					, x, y, 0);
@@ -77,4 +77,8 @@ void			draw_stats(t_world *world)
 			, 10, 170, color, "Lines: ");
 	mlx_string_put(world->window->mlx, world->window->mlx_window
 			, 70, 170, color, ft_itoa(world->lines));
+	mlx_string_put(world->window->mlx, world->window->mlx_window
+			, 10, 190, color, "Points: ");
+	mlx_string_put(world->window->mlx, world->window->mlx_window
+			, 85, 190, color, ft_itoa(world->points));
 }

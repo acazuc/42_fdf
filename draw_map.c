@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 07:17:02 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/08 08:23:29 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/09 08:54:56 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,10 +80,11 @@ void			draw_map(t_world *world)
 	t_point		*p2;
 
 	if (!(p1 = malloc(sizeof(t_point))))
-		error_quit("Failed to malloc point number 1 (draw_map.c:78)");
+		error_quit("Failed to malloc point number 1");
 	if (!(p2 = malloc(sizeof(t_point))))
-		error_quit("failed to malloc point number 2 (draw_map.c:80)");
+		error_quit("failed to malloc point number 2");
 	world->lines = 0;
+	world->points = 0;
 	draw_map_part(world, p1, p2);
 	free(p1);
 	free(p2);

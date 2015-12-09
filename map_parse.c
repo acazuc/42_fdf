@@ -6,13 +6,13 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 08:28:50 by acazuc            #+#    #+#             */
-/*   Updated: 2015/11/29 19:34:29 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/09 09:01:14 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
 #include "libft/libft.h"
+#include "error_quit.h"
 #include "map.h"
 
 static int		map_parse_part(t_map *map, char *content, int i, int start)
@@ -48,12 +48,13 @@ int				map_parse(t_map *map, char *content)
 	int		x;
 	int		z;
 
-	map->data = malloc(sizeof(*(map->data)) * map->height);
+	if (!(map->data = malloc(sizeof(*(map->data)) * map->height)))
+		error_quit("Failed to malloc map");
 	z = 0;
-	printf("Height: %d, width: %d\n", map->height, map->width);
 	while (z < map->height)
 	{
-		map->data[z] = malloc(sizeof(**(map->data)) * map->width);
+		if (!(map->data[z] = malloc(sizeof(**(map->data)) * map->width)))
+			error_quit("Failed to malloc map");
 		x = 0;
 		while (x < map->width)
 		{

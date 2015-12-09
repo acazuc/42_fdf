@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 17:44:42 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/07 11:47:51 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/09 08:59:41 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,11 @@ void			world_init_positions(t_world *world)
 void			world_init(t_world *world)
 {
 	if (!(world->rotation = malloc(sizeof(*(world->rotation)))))
-		error_quit(ft_strcat("Failed to malloc world rotation struct"
-					, " (world_init.c:37)"));
+		error_quit("Failed to malloc world rotation struct");
 	if (!(world->position = malloc(sizeof(*(world->position)))))
-		error_quit(ft_strcat("Failed to malloc world position struct"
-					, " (world_init.c:39)"));
+		error_quit("Failed to malloc world position struct");
 	if (!(world->window = malloc(sizeof(*(world->window)))))
-		error_quit(ft_strcat("Failed to malloc world window struct"
-			, " (world_init.c:41)"));
+		error_quit("Failed to malloc world window struct");
 	world_init_vectors(world);
 	world->window->mlx = NULL;
 	world->window->mlx_window = NULL;

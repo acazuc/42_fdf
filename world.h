@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 08:54:15 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/08 08:08:38 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/09 08:01:48 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct			s_world
 	t_window			*window;
 	t_map				*map;
 	int					lines;
+	int					points;
 }						t_world;
 
 #endif
