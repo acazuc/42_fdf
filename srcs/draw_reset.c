@@ -6,12 +6,11 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/07 13:24:08 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/07 13:47:27 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 08:16:38 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pixel_put.h"
-#include "world.h"
+#include "fdf.h"
 
 void	draw_reset(t_world *world)
 {

@@ -6,18 +6,11 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 11:46:11 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/27 17:07:27 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 08:19:37 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <fcntl.h>
-#include "get_file_content.h"
-#include "../libft/libft.h"
-#include "error_quit.h"
-#include "map_parse.h"
-#include "world.h"
-#include "map.h"
+#include "fdf.h"
 
 static int	is_valid_chars(char *map)
 {

@@ -6,12 +6,14 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 07:03:55 by acazuc            #+#    #+#             */
-/*   Updated: 2015/11/29 07:15:10 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 08:20:59 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LINE_H
 # define FT_LINE_H
+
+# include "point.h"
 
 typedef struct		s_line
 {

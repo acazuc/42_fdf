@@ -6,11 +6,11 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/07 13:14:38 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/07 13:16:10 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 08:18:31 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pixel_put.h"
+#include "fdf.h"
 
 void	ft_erase(t_env *env)
 {

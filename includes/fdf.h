@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_quit.c                                       :+:      :+:    :+:   */
+/*   fdf.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/29 19:32:12 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/28 08:17:30 by acazuc           ###   ########.fr       */
+/*   Created: 2015/12/28 08:06:36 by acazuc            #+#    #+#             */
+/*   Updated: 2015/12/28 08:22:45 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#ifndef FT_FDF_H
+# define FT_FDF_H
 
-void	error_quit(char *error_message)
-{
-	ft_putstr("Error happened: ");
-	ft_putendl(error_message);
-	exit(-1);
-}
+# include "../libft/libft.h"
+# include "prototypes.h"
+# include "includes.h"
+# include "window.h"
+# include "vector.h"
+# include "point.h"
+# include "world.h"
+# include "line.h"
+# include "map.h"
+
+#endif

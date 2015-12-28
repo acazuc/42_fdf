@@ -6,22 +6,11 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 11:58:23 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/27 17:07:09 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 08:17:58 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <mlx.h>
-#include "event_listener.h"
-#include "window_init.h"
-#include "world_init.h"
-#include "draw_stats.h"
-#include "error_quit.h"
-#include "load_map.h"
-#include "draw_map.h"
-#include "vector.h"
-#include "world.h"
-#include "map.h"
+#include "fdf.h"
 
 int		main(int argc, char **argv)
 {

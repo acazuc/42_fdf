@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_quit.c                                       :+:      :+:    :+:   */
+/*   includes.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/29 19:32:12 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/28 08:17:30 by acazuc           ###   ########.fr       */
+/*   Created: 2015/12/28 08:15:28 by acazuc            #+#    #+#             */
+/*   Updated: 2015/12/28 08:19:01 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#ifndef FT_INCLUDES_H
+# define FT_INCLUDES_H
 
-void	error_quit(char *error_message)
-{
-	ft_putstr("Error happened: ");
-	ft_putendl(error_message);
-	exit(-1);
-}
+# include <stdlib.h>
+# include <unistd.h>
+# include <fcntl.h>
+# include <math.h>
+# include <mlx.h>
+
+#endif

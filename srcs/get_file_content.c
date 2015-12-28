@@ -6,16 +6,11 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 14:08:27 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/09 08:55:11 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 08:19:11 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include "file_length.h"
-#include "error_quit.h"
-#include "world.h"
+#include "fdf.h"
 
 char	*get_file_content(char *file)
 {

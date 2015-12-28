@@ -6,11 +6,11 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 17:54:25 by acazuc            #+#    #+#             */
-/*   Updated: 2015/11/29 18:08:02 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 08:20:16 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "world.h"
+#include "fdf.h"
 
 static void		check_loop(t_world *world)
 {

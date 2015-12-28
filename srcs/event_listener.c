@@ -6,19 +6,11 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 06:55:32 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/27 17:07:00 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 08:17:39 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <mlx.h>
-#include "../libft/libft.h"
-#include "draw_stats.h"
-#include "draw_reset.h"
-#include "movements.h"
-#include "rotations.h"
-#include "draw_map.h"
-#include "world.h"
+#include "fdf.h"
 
 void	key_listener_moves(t_world *world, int key)
 {

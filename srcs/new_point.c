@@ -6,13 +6,11 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 14:54:40 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/09 09:02:21 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 08:20:02 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "error_quit.h"
-#include "point.h"
+#include "fdf.h"
 
 t_point	*new_point(double x, double y, double z)
 {

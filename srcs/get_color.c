@@ -6,12 +6,11 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 15:36:18 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/27 17:07:18 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 08:18:38 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "point.h"
-#include "../libft/libft.h"
+#include "fdf.h"
 
 int		get_color(t_point *point)
 {

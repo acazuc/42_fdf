@@ -6,14 +6,11 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 14:00:44 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/09 08:54:02 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 08:18:22 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#include "error_quit.h"
+#include "fdf.h"
 
 int		file_length(char *file)
 {

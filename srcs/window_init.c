@@ -6,13 +6,11 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/07 13:36:38 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/27 17:07:55 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 08:20:25 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <mlx.h>
-#include "error_quit.h"
-#include "world.h"
+#include "fdf.h"
 
 void	window_init(t_world *world)
 {

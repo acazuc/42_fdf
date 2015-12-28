@@ -6,12 +6,11 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/07 13:16:19 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/27 17:07:44 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 08:20:11 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <mlx.h>
-#include "world.h"
+#include "fdf.h"
 
 void	pixel_put(t_world *world, int x, int y, unsigned int color)
 {

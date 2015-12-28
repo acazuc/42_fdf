@@ -6,17 +6,11 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 07:17:02 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/27 17:06:18 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 08:16:30 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <mlx.h>
-#include "error_quit.h"
-#include "draw_line.h"
-#include "point.h"
-#include "world.h"
-#include "map.h"
+#include "fdf.h"
 
 static void		draw_map_part_ortho(t_world *world, t_point *p1, t_point *p2)
 {

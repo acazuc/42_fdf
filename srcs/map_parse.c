@@ -6,14 +6,11 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 08:28:50 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/27 17:07:33 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 08:19:45 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "../libft/libft.h"
-#include "error_quit.h"
-#include "map.h"
+#include "fdf.h"
 
 static int		map_parse_part(t_map *map, char *content, int i, int start)
 {

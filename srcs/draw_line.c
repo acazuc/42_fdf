@@ -6,20 +6,11 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 14:25:27 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/27 17:06:09 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 08:16:19 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <math.h>
-#include <mlx.h>
-#include "get_screen_coord.h"
-#include "error_quit.h"
-#include "pixel_put.h"
-#include "get_color.h"
-#include "world.h"
-#include "point.h"
-#include "line.h"
+#include "fdf.h"
 
 static void	draw_line_part(t_world *world, t_line *line)
 {

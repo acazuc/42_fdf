@@ -6,12 +6,11 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 13:36:37 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/08 18:02:56 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 08:19:53 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <math.h>
-#include "world.h"
+#include "fdf.h"
 
 static void		move(t_world *world, float angle)
 {

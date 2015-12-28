@@ -6,13 +6,11 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 15:32:25 by acazuc            #+#    #+#             */
-/*   Updated: 2015/11/29 16:58:46 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 08:19:19 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <math.h>
-#include "point.h"
-#include "world.h"
+#include "fdf.h"
 
 double			new_x(t_world *world, t_point *point)
 {

@@ -6,13 +6,11 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 12:51:58 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/27 17:06:39 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 08:17:20 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <mlx.h>
-#include "../libft/libft.h"
-#include "world.h"
+#include "fdf.h"
 
 static void		draw_stats_reset(t_world *world)
 {
