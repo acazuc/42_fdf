@@ -6,7 +6,7 @@
 #    By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 06:50:12 by acazuc            #+#    #+#              #
-#    Updated: 2015/12/28 08:47:51 by acazuc           ###   ########.fr        #
+#    Updated: 2015/12/28 09:13:51 by acazuc           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -107,6 +107,7 @@ $(NAME): $(OBJS)
 	@gcc $(FLAGS) -o $(NAME) $^ $(LIBRARY)
 
 $(OBJS_PATH)%.o: $(SRCS_PATH)%.c
+	@echo " - Compiling $<"
 	@gcc $(FLAGS) -o $@ -c $< -I$(INCLUDES_PATH)
 
 .PHONY: clean fclean re
