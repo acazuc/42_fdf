@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: acazuc <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 06:50:12 by acazuc            #+#    #+#              #
-#    Updated: 2015/12/27 17:12:52 by acazuc           ###   ########.fr        #
+#    Updated: 2015/12/28 08:47:51 by acazuc           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,25 @@ INCLUDES_PATH = includes/
 
 SRCS_PATH = srcs/
 
-SRCS_NAME = fdf.c draw_line.c get_screen_coord.c new_point.c get_color.c event_listener.c load_map.c file_length.c get_file_content.c draw_map.c map_parse.c draw_stats.c movements.c world_init.c rotations.c error_quit.c draw_reset.c pixel_put.c window_init.c
+SRCS_NAME = fdf.c \
+			draw_line.c \
+			get_screen_coord.c \
+			new_point.c \
+			get_color.c \
+			event_listener.c \
+			load_map.c \
+			file_length.c \
+			get_file_content.c \
+			draw_map.c \
+			map_parse.c \
+			draw_stats.c \
+			movements.c \
+			world_init.c \
+			rotations.c \
+			error_quit.c \
+			draw_reset.c \
+			pixel_put.c \
+			window_init.c
 
 SRCS = $(addprefix $(SRCS_PATH), $(SRCS_NAME))
 
