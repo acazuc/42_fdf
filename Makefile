@@ -6,7 +6,7 @@
 #    By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 06:50:12 by acazuc            #+#    #+#              #
-#    Updated: 2015/12/28 09:13:51 by acazuc           ###   ########.fr        #
+#    Updated: 2015/12/28 11:22:49 by acazuc           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,9 @@ LIBRARY = -lm -L libft/ -lft -lmlx -framework OpenGL -framework AppKit
 all: $(NAME)
 
 $(NAME): $(OBJS)
+	@make -C libft/
+	@echo " - Making $(NAME)"
+	@gcc $(FLAGS) -o $(NAME) $^ $(LIBRARY)
 	@echo "\033[1;32m"
 	@echo "                                      AKEFILEMA                         (c) Tchang     "
 	@echo "                                  KEFILEMAKEFILEMAK                                    "
@@ -103,8 +106,7 @@ $(NAME): $(OBJS)
 	@echo "                               EMAKEFILEM                                              "
 	@echo "                                 AKEFILE                                               "
 	@echo "                                   MAK                                                 "
-	@make -C libft/
-	@gcc $(FLAGS) -o $(NAME) $^ $(LIBRARY)
+	@echo "\033[1;0m"
 
 $(OBJS_PATH)%.o: $(SRCS_PATH)%.c
 	@echo " - Compiling $<"

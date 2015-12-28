@@ -6,14 +6,14 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/28 08:06:36 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/28 08:22:45 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 11:22:20 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_FDF_H
 # define FT_FDF_H
 
-# include "../libft/libft.h"
+# include "../libft/includes/libft.h"
 # include "prototypes.h"
 # include "includes.h"
 # include "window.h"
