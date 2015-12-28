@@ -6,11 +6,35 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 08:28:50 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/28 08:19:45 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 13:36:38 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
+
+static int		map_check(t_map *map, char *content)
+{
+	int		current_width;
+	int		i;
+
+	current_width = 0;
+	i = -1;
+	while (content[++i])
+	{
+		if (content[i] == '-' || (content[i] >= '0' && content[i] <= '9'))
+		{
+			if (i == 0 || content[i - 1] == ' ' || content[i - 1] == '\n')
+				current_width++;
+		}
+		else if (content[i] == '\n')
+		{
+			if (current_width != map->width)
+				return (0);
+			current_width = 0;
+		}
+	}
+	return (1);
+}
 
 static int		map_parse_part(t_map *map, char *content, int i, int start)
 {
@@ -32,10 +56,10 @@ static int		map_parse_part(t_map *map, char *content, int i, int start)
 				return (0);
 			map->data[z][x++] = ft_atoi(substr);
 			free(substr);
-			x = content[i + 1] == '\n' ? 0 : x;
-			z = content[i + 1] == '\n' ? z + 1 : z;
 			start = -1;
 		}
+		z = content[i] == '\n' ? z + 1 : z;
+		x = content[i] == '\n' ? 0 : x;
 	}
 	return (1);
 }
@@ -55,10 +79,10 @@ int				map_parse(t_map *map, char *content)
 		x = 0;
 		while (x < map->width)
 		{
-			map->data[z][x] = 0;
+			map->data[z][x] = 127;
 			x++;
 		}
 		z++;
 	}
-	return (map_parse_part(map, content, -1, -1));
+	return (map_check(map, content) && map_parse_part(map, content, -1, -1));
 }

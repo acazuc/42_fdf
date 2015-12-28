@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/07 13:16:19 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/28 08:20:11 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 12:56:31 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	pixel_put(t_world *world, int x, int y, unsigned int color)
 	r = (color & 0xFF0000) >> 16;
 	g = (color & 0x00FF00) >> 8;
 	b = (color & 0x0000FF);
-	if (x >= 0 && x <= world->window->width
-			&& y >= 0 && y <= world->window->height)
+	if (x >= 0 && x < world->window->width
+			&& y >= 0 && y < world->window->height)
 	{
 		world->window->data[y * world->window->width * world->window->bpp / 8
 			+ world->window->bpp / 8 * x] = b;

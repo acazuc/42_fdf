@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 11:46:11 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/28 08:19:37 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/28 12:55:43 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,24 +49,23 @@ static int	get_map_width(char *map)
 	int		count;
 	int		i;
 
-	maximum = 0;
+	maximum = -1;
 	count = 0;
-	i = 0;
-	while (map[i])
+	i = -1;
+	while (map[++i])
 	{
-		if (map[i] == '\n' || !(map[i + 1]))
+		if (map[i] == '-' || (map[i] >= '0' && map[i] <= '9'))
+		{
+			if (i == 0 || map[i - 1] == ' ' || map[i - 1] == '\n')
+				count++;
+		}
+		else if (map[i] == '\n')
 		{
 			if (count > maximum)
 				maximum = count;
 			count = 0;
 		}
-		if (map[i] != ' ' && (i == 0 || map[i - 1] == ' '
-					|| map[i - 1] == '\n'))
-			count++;
-		i++;
 	}
-	if (count > maximum)
-		return (count);
 	return (maximum);
 }
 
