@@ -6,77 +6,46 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 12:51:58 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/28 08:17:20 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/29 08:12:41 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-static void		draw_stats_reset(t_world *world)
+static void		draw_string(t_world *world, int x, int y, char *string)
 {
-	int		x;
-	int		y;
-
-	x = 10;
-	while (x < 200)
-	{
-		y = 10;
-		while (y < 210)
-		{
-			mlx_pixel_put(world->window->mlx, world->window->mlx_window
-					, x, y, 0);
-			y++;
-		}
-		x++;
-	}
+	mlx_string_put(world->window->mlx, world->window->mlx_window
+			, x + 2, y + 2, 0x000000, string);
+	mlx_string_put(world->window->mlx, world->window->mlx_window
+			, x, y, 0xFFFFFF, string);
 }
 
-void			draw_stats_positions(t_world *world, unsigned int color)
+void			draw_stats_positions(t_world *world)
 {
-	mlx_string_put(world->window->mlx, world->window->mlx_window
-			, 10, 10, color, "Position");
-	mlx_string_put(world->window->mlx, world->window->mlx_window
-			, 20, 30, color, "X: ");
-	mlx_string_put(world->window->mlx, world->window->mlx_window
-			, 40, 30, color, ft_itoa(world->position->x));
-	mlx_string_put(world->window->mlx, world->window->mlx_window
-			, 20, 50, color, "Y: ");
-	mlx_string_put(world->window->mlx, world->window->mlx_window
-			, 40, 50, color, ft_itoa(world->position->y));
-	mlx_string_put(world->window->mlx, world->window->mlx_window
-			, 20, 70, color, "Z: ");
-	mlx_string_put(world->window->mlx, world->window->mlx_window
-			, 40, 70, color, ft_itoa(world->position->z));
+	draw_string(world, 10, 10, "Position");
+	draw_string(world, 20, 30, "X: ");
+	draw_string(world, 40, 30, ft_itoa(world->position->x));
+	draw_string(world, 20, 50, "Y: ");
+	draw_string(world, 40, 50, ft_itoa(world->position->y));
+	draw_string(world, 20, 70, "Z: ");
+	draw_string(world, 40, 70, ft_itoa(world->position->z));
 }
 
-void			draw_stats_rotations(t_world *world, unsigned int color)
+void			draw_stats_rotations(t_world *world)
 {
-	mlx_string_put(world->window->mlx, world->window->mlx_window
-			, 10, 100, color, "Rotation");
-	mlx_string_put(world->window->mlx, world->window->mlx_window
-			, 20, 120, color, "X: ");
-	mlx_string_put(world->window->mlx, world->window->mlx_window
-			, 40, 120, color, ft_itoa(world->rotation->x));
-	mlx_string_put(world->window->mlx, world->window->mlx_window
-			, 20, 140, color, "Y: ");
-	mlx_string_put(world->window->mlx, world->window->mlx_window
-			, 40, 140, color, ft_itoa(world->rotation->y));
+	draw_string(world, 10, 100, "Rotation");
+	draw_string(world, 20, 120, "X: ");
+	draw_string(world, 40, 120, ft_itoa(world->rotation->x));
+	draw_string(world, 20, 140, "Y: ");
+	draw_string(world, 40, 140, ft_itoa(world->rotation->y));
 }
 
 void			draw_stats(t_world *world)
 {
-	unsigned int		color;
-
-	color = 0x0066FF;
-	draw_stats_reset(world);
-	draw_stats_positions(world, color);
-	draw_stats_rotations(world, color);
-	mlx_string_put(world->window->mlx, world->window->mlx_window
-			, 10, 170, color, "Lines: ");
-	mlx_string_put(world->window->mlx, world->window->mlx_window
-			, 70, 170, color, ft_itoa(world->lines));
-	mlx_string_put(world->window->mlx, world->window->mlx_window
-			, 10, 190, color, "Points: ");
-	mlx_string_put(world->window->mlx, world->window->mlx_window
-			, 85, 190, color, ft_itoa(world->points));
+	draw_stats_positions(world);
+	draw_stats_rotations(world);
+	draw_string(world, 10, 170, "Lines: ");
+	draw_string(world, 70, 170, ft_itoa(world->lines));
+	draw_string(world, 10, 190, "Points: ");
+	draw_string(world, 85, 190, ft_itoa(world->points));
 }
