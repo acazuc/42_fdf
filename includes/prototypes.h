@@ -6,12 +6,12 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/28 08:02:12 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/28 08:21:25 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/02 13:27:35 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PROTOTYPES_H
-# define FT_PROTOTYPES_H
+#ifndef PROTOTYPES_H
+# define PROTOTYPES_H
 
 # include "world.h"
 # include "point.h"

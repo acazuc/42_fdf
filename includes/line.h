@@ -6,12 +6,12 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 07:03:55 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/28 08:20:59 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/02 13:27:18 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LINE_H
-# define FT_LINE_H
+#ifndef LINE_H
+# define LINE_H
 
 # include "point.h"
 

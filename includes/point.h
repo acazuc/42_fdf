@@ -6,12 +6,12 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 11:59:33 by acazuc            #+#    #+#             */
-/*   Updated: 2015/11/27 15:52:01 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/02 13:27:28 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_POINT_H
-# define FT_POINT_H
+#ifndef POINT_H
+# define POINT_H
 
 typedef struct	s_point
 {

@@ -6,12 +6,12 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 11:49:21 by acazuc            #+#    #+#             */
-/*   Updated: 2015/11/28 11:54:35 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/02 13:27:23 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_MAP_H
-# define FT_MAP_H
+#ifndef MAP_H
+# define MAP_H
 
 typedef struct		s_map
 {
