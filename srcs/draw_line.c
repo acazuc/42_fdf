@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 14:25:27 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/28 08:16:19 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/07 07:50:31 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 
 static void	draw_line_part(t_world *world, t_line *line)
 {
-	t_point		*point;
+	t_point		point;
 	double		ratio;
 	double		x;
 	double		y;
 
-	if (!(point = malloc(sizeof(t_point))))
-		error_quit("Failed to malloc point struct");
 	ratio = 0;
+	if ((line->org_x < 0 || line->org_x >= world->window->width)
+			&& (line->org_y < 0 || line->org_y >= world->window->height))
+		return ;
 	while (ratio <= 1)
 	{
 		x = line->org_x + line->dx * ratio;
-		point->y = line->p1->y + (line->p2->y - line->p1->y) * ratio;
+		point.y = line->p1->y + (line->p2->y - line->p1->y) * ratio;
 		y = line->org_y + line->dy * ratio;
 		if (x > 0 && x < world->window->width
 				&& y > 0 && y < world->window->height)
 		{
-			pixel_put(world, x, y, get_color(point));
+			pixel_put(world, x, y, get_color(&point));
 			world->points++;
 		}
 		ratio += 1.0 / line->length;
 	}
-	free(point);
 }
 
 void		draw_line(t_world *world, t_point *p1, t_point *p2)
