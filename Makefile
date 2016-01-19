@@ -6,11 +6,13 @@
 #    By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 06:50:12 by acazuc            #+#    #+#              #
-#    Updated: 2015/12/28 11:22:49 by acazuc           ###   ########.fr        #
+#    Updated: 2016/01/19 08:57:44 by acazuc           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fdf
+
+CC = gcc
 
 FLAGS = -Wall -Wextra -Werror -Ofast
 
@@ -53,7 +55,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@make -C libft/
 	@echo " - Making $(NAME)"
-	@gcc $(FLAGS) -o $(NAME) $^ $(LIBRARY)
+	@$(CC) $(CFLAGS) -o $(NAME) $^ $(LIBRARY)
 	@echo "\033[1;32m"
 	@echo "                                      AKEFILEMA                         (c) Tchang     "
 	@echo "                                  KEFILEMAKEFILEMAK                                    "
@@ -110,7 +112,7 @@ $(NAME): $(OBJS)
 
 $(OBJS_PATH)%.o: $(SRCS_PATH)%.c
 	@echo " - Compiling $<"
-	@gcc $(FLAGS) -o $@ -c $< -I$(INCLUDES_PATH)
+	@$(CC) $(CFLAGS) -o $@ -c $< -I$(INCLUDES_PATH)
 
 .PHONY: clean fclean re
 
