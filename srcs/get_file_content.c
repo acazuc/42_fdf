@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 14:08:27 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/28 13:13:03 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/21 13:18:07 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*get_file_content(char *file)
 		close(fd);
 		error_quit("Failed to read map file");
 	}
-	file_content[rd] = '\0';
+	file_content[file_size] = '\0';
 	close(fd);
 	return (file_content);
 }

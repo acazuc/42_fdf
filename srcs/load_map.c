@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 11:46:11 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/28 12:55:43 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/21 13:19:13 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,7 @@ void		load_map(t_world *world, char *file)
 
 	map_content = get_file_content(file);
 	if (!is_valid_chars(map_content))
-		error_quit(ft_strcat("Map isn't a valid map (only map with [0-9 "
-					, "-\\n\\0] charcters allowed"));
+		error_quit("Invalid map chars");
 	if (!(world->map = malloc(sizeof(*(world->map)))))
 		error_quit("Failed to malloc map struct");
 	world->map->height = get_map_height(map_content);
