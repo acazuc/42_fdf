@@ -6,7 +6,7 @@
 #    By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 06:50:12 by acazuc            #+#    #+#              #
-#    Updated: 2016/01/21 13:36:18 by acazuc           ###   ########.fr        #
+#    Updated: 2016/01/21 13:40:30 by acazuc           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -113,8 +113,6 @@ $(OBJS_PATH)%.o: $(SRCS_PATH)%.c
 	@echo " - Compiling $<"
 	@$(CC) $(CFLAGS) -o $@ -c $< -I$(INCLUDES_PATH)
 
-.PHONY: clean fclean re odir
-
 odir:
 	@mkdir -p $(OBJS_PATH)
 
@@ -129,3 +127,5 @@ fclean: clean
 	@rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: clean fclean re odir
