@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/28 08:02:12 by acazuc            #+#    #+#             */
-/*   Updated: 2016/01/02 13:27:35 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/22 09:06:29 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	error_quit(char *error_message);
 int		key_listener(int keycode, void *param);
 int		expose_listener(void *param);
 int		file_length(char *file);
-int		get_color(t_point *point);
+int		get_color(t_world *world, t_point *point);
 char	*get_file_content(char *file);
 double	new_x(t_world *world, t_point *point);
 double	new_y(t_world *world, t_point *point);
@@ -47,5 +47,6 @@ void	rotate_down(t_world *world);
 void	window_init(t_world *world);
 void	world_init_positions(t_world *world);
 void	world_init(t_world *world);
+void	get_min_max(t_world *world);
 
 #endif

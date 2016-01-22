@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 15:32:25 by acazuc            #+#    #+#             */
-/*   Updated: 2016/01/07 07:42:17 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/22 09:13:14 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ double			new_x(t_world *world, t_point *point)
 		* (point->x - world->position->x)
 		- sin(world->rotation->y / 180.0 * 3.14)
 		* ((point->z - world->position->z) + world->map->height);
-	return (x * 500.0);
+	return (x * 50);
 }
 
 double			new_y(t_world *world, t_point *point)
@@ -34,7 +34,7 @@ double			new_y(t_world *world, t_point *point)
 		* (point->x - world->position->x))
 		+ cos(world->rotation->x / 180.0 * 3.14)
 		* (point->y - world->position->y);
-	return (y * 500.0);
+	return (y * 50);
 }
 
 double			new_z(t_world *world, t_point *point)
@@ -48,7 +48,7 @@ double			new_z(t_world *world, t_point *point)
 		* (point->x - world->position->x))
 		- sin(world->rotation->x / 180.0 * 3.14)
 		* (point->y - world->position->y);
-	return (z);
+	return (z / 50);
 }
 
 int				get_screen_x(t_world *world, t_point *point)

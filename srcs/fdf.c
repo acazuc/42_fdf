@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 11:58:23 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/28 08:17:58 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/22 09:03:17 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int		main(int argc, char **argv)
 	window_init(world);
 	load_map(world, argv[1]);
 	world_init_positions(world);
+	get_min_max(world);
 	mlx_key_hook(world->window->mlx_window, &key_listener, world);
 	mlx_expose_hook(world->window->mlx_window, &expose_listener, world);
 	mlx_loop(world->window->mlx);

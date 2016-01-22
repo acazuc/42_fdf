@@ -6,7 +6,7 @@
 #    By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 06:50:12 by acazuc            #+#    #+#              #
-#    Updated: 2016/01/21 13:40:30 by acazuc           ###   ########.fr        #
+#    Updated: 2016/01/22 09:02:05 by acazuc           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,8 @@ SRCS_NAME = fdf.c \
 			error_quit.c \
 			draw_reset.c \
 			pixel_put.c \
-			window_init.c
+			window_init.c \
+			get_min_max.c
 
 SRCS = $(addprefix $(SRCS_PATH), $(SRCS_NAME))
 

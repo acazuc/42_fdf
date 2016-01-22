@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 14:25:27 by acazuc            #+#    #+#             */
-/*   Updated: 2016/01/07 07:50:31 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/22 09:06:45 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static void	draw_line_part(t_world *world, t_line *line)
 		if (x > 0 && x < world->window->width
 				&& y > 0 && y < world->window->height)
 		{
-			pixel_put(world, x, y, get_color(&point));
+			pixel_put(world, x, y, get_color(world, &point));
 			world->points++;
 		}
 		ratio += 1.0 / line->length;
