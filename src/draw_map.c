@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 07:17:02 by acazuc            #+#    #+#             */
-/*   Updated: 2016/01/07 07:47:52 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/03/16 12:44:52 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,7 @@ static void		draw_map_part(t_world *world, t_point *p1, t_point *p2)
 			p1->y = world->map->data[z][x];
 			p1->z = z;
 			draw_map_part_ortho(world, p1, p2);
-			if (!p1)
-				draw_map_part_diago(world, p1, p2);
+			draw_map_part_diago(world, p1, p2);
 		}
 	}
 }

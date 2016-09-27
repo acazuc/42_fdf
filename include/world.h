@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 08:54:15 by acazuc            #+#    #+#             */
-/*   Updated: 2016/01/22 08:58:37 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/03/16 11:41:56 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,16 @@ typedef struct			s_world
 	int					points;
 	int					min;
 	int					max;
+	int					rotate_up;
+	int					rotate_down;
+	int					rotate_left;
+	int					rotate_right;
+	int					move_up;
+	int					move_down;
+	int					move_forward;
+	int					move_backward;
+	int					move_left;
+	int					move_right;
 }						t_world;
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 17:44:42 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/28 08:20:35 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/03/16 11:45:26 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,20 @@ void			world_init_positions(t_world *world)
 	world->position->z = world->map->height;
 }
 
+static void		init_keys(t_world *world)
+{
+	world->rotate_up = 0;
+	world->rotate_down = 0;
+	world->rotate_left = 0;
+	world->rotate_right = 0;
+	world->move_up = 0;
+	world->move_down = 0;
+	world->move_forward = 0;
+	world->move_backward = 0;
+	world->move_left = 0;
+	world->move_right = 0;
+}
+
 void			world_init(t_world *world)
 {
 	if (!(world->rotation = malloc(sizeof(*(world->rotation)))))
@@ -43,4 +57,5 @@ void			world_init(t_world *world)
 	world->map = NULL;
 	world->window->width = 1920;
 	world->window->height = 1080;
+	init_keys(world);
 }

@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/28 08:02:12 by acazuc            #+#    #+#             */
-/*   Updated: 2016/01/22 09:06:29 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/03/16 11:41:35 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,7 @@ void	window_init(t_world *world);
 void	world_init_positions(t_world *world);
 void	world_init(t_world *world);
 void	get_min_max(t_world *world);
+int		key_press_listener(int key, void *data);
+int		key_release_listener(int key, void *data);
 
 #endif

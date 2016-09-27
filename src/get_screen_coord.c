@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 15:32:25 by acazuc            #+#    #+#             */
-/*   Updated: 2016/01/22 09:13:14 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/03/16 13:55:47 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ double			new_z(t_world *world, t_point *point)
 		* (point->x - world->position->x))
 		- sin(world->rotation->x / 180.0 * 3.14)
 		* (point->y - world->position->y);
-	return (z / 50);
+	return (z / 10);
 }
 
 int				get_screen_x(t_world *world, t_point *point)
